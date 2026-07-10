@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SN Pulse · June 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green:       #00534C;
+      --green-dark:  #003d38;
+      --gold:        #FFB81C;
+      --gold-pale:   #FFFBF0;
+      --charcoal:    #373A36;
+      --teal:        #007681;
+      --white:       #FFFFFF;
+      --off-white:   #F9F9F7;
+      --light-gray:  #F0F0EE;
+      --mid-gray:    #E2E2DF;
+      --text:        #1E1E1C;
+      --text-mid:    #555550;
+      --text-light:  #92928E;
+      --rule:        #E5E5E2;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--light-gray); font-family: 'Open Sans', Corbel, sans-serif; color: var(--text); font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 1000px; margin: 0 auto; background: var(--white); box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 8px 48px rgba(0,0,0,0.08); }
+    .masthead { background: var(--white); border-top: 4px solid var(--green); padding: 36px 52px 28px; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; position: relative; }
+    .masthead::after { content: ''; position: absolute; bottom: 0; left: 52px; right: 52px; height: 1px; background: var(--rule); }
+    .masthead::before { content: ''; position: absolute; top: 4px; left: 0; right: 0; height: 2px; background: var(--gold); }
+    .newsletter-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; line-height: 1; }
+    .newsletter-title em { font-style: italic; color: var(--green); }
+    .masthead-right { text-align: right; flex-shrink: 0; padding-bottom: 4px; }
+    .issue-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
+    .issue-date { font-size: 13px; font-weight: 700; color: var(--charcoal); }
+    .issue-vol { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+    .nav { background: var(--off-white); border-bottom: 1px solid var(--rule); padding: 0 52px; display: flex; overflow-x: auto; gap: 0; }
+    .nav a { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; padding: 11px 18px 11px 0; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .nav a:hover { color: var(--green); border-bottom-color: var(--gold); }
+    .nav a + a { padding-left: 18px; border-left: 1px solid var(--rule); }
+    .archive-callout { display:flex; justify-content:flex-end; padding:16px 52px 0; background:var(--white); }
+    .archive-card { display:flex; align-items:center; gap:14px; background:#FFE9A6; border:1px solid #F5D27A; border-left:3px solid var(--gold); padding:11px 18px; max-width:360px; text-decoration:none; transition:background 0.15s, transform 0.15s, box-shadow 0.15s; }
+    .archive-card:hover { background:#FFD982; transform:translateY(-1px); box-shadow:0 4px 14px rgba(255,184,28,0.30); }
+    .archive-icon { font-size:22px; line-height:1; flex-shrink:0; }
+    .archive-meta { flex:1; min-width:0; }
+    .archive-eyebrow { font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); margin-bottom:2px; }
+    .archive-title { font-size:13px; font-weight:700; color:var(--charcoal); line-height:1.3; }
+    .archive-cta { font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); white-space:nowrap; }
+    .content { padding: 0 52px; }
+    .sec-head { display: flex; align-items: center; gap: 16px; margin: 52px 0 28px; }
+    .sec-label { font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); white-space: nowrap; }
+    .sec-line { flex: 1; height: 2px; background: var(--rule); }
+    .sec-pip { width: 28px; height: 4px; background: var(--gold); flex-shrink: 0; border-radius: 2px; }
+    .leadership { background: var(--green); margin: 0 -52px; padding: 44px 52px; position: relative; overflow: hidden; }
+    .leadership::before { content: '\201C'; font-family: Georgia, serif; font-size: 280px; line-height: 0.75; color: rgba(255,184,28,0.08); position: absolute; top: 20px; left: 36px; pointer-events: none; user-select: none; }
+    .leadership .sec-label { color: var(--gold); opacity: 0.85; }
+    .leadership .sec-line { background: rgba(255,184,28,0.3); }
+    .leadership .sec-pip { background: var(--gold); }
+    .leadership-quote { font-size: 19px; font-weight: 300; line-height: 1.7; color: var(--white); font-style: italic; margin-bottom: 24px; position: relative; z-index: 1; border-left: 3px solid var(--gold); padding-left: 20px; }
+    .attrib { display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+    .attrib-name { font-size: 13px; font-weight: 700; color: var(--gold); }
+    .attrib-title { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+    .feature-kicker { font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .feature-hed { font-size: 27px; font-weight: 800; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .feature-dek { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; font-style: italic; color: var(--green); line-height: 1.45; margin: 4px 0 22px; padding: 0; background: transparent; border: none; letter-spacing: -0.005em; }
+    .feature-body { font-size: 14.5px; line-height: 1.85; color: var(--text-mid); }
+    .feature-body p + p { margin-top: 13px; }
+    .cta-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 18px; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--green); text-decoration: none; padding: 9px 18px; transition: background 0.15s; }
+    .cta-link:hover { background: var(--green-dark); }
+    .cta-link::after { content: '→'; font-size: 12px; }
+    .course-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; }
+    .course-card { background:var(--off-white); border:1px solid var(--rule); border-left:3px solid var(--teal); padding:18px 18px 14px; text-decoration:none; color:inherit; display:block; position:relative; transition: box-shadow 0.15s, transform 0.15s, border-left-color 0.15s; }
+    .course-card:hover { box-shadow: 0 4px 16px rgba(0,118,129,0.12); transform: translateY(-2px); border-left-color: var(--green); }
+    .course-tag { font-size:8.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+    .course-title { font-size:13.5px; font-weight:700; color:var(--text); margin-bottom:6px; line-height:1.3; padding-right:42px; }
+    .course-desc { font-size:11.5px; color:var(--text-mid); line-height:1.55; margin-bottom:12px; }
+    .course-meta { font-size:9.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); display:flex; align-items:center; gap:7px; padding-top:10px; border-top:1px solid var(--rule); }
+    .course-meta::before { content:'▶'; font-size:8px; opacity:0.85; }
+    .course-badge-new { position:absolute; top:14px; right:14px; background:var(--gold); color:var(--charcoal); font-size:8.5px; font-weight:800; letter-spacing:0.10em; text-transform:uppercase; padding:3px 8px; border-radius:2px; line-height:1; z-index:2; box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
+    .course-img { width: calc(100% + 36px); height: 100px; margin: -18px -18px 14px; overflow: hidden; position: relative; }
+    .course-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .rule-gold { display: flex; align-items: center; gap: 0; margin: 52px 0; }
+    .rule-gold::before, .rule-gold::after { content: ''; flex: 1; height: 2px; background: var(--mid-gray); }
+    .rule-gold-center { width: 56px; height: 5px; background: var(--gold); margin: 0 16px; border-radius: 3px; }
+    .events-intro { font-size: 14px; color: var(--text-mid); line-height: 1.7; margin-bottom: 24px; padding: 16px 20px; background: var(--off-white); border-left: 3px solid var(--green); }
+    .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .event-card { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); border-bottom: 3px solid var(--green); padding: 20px; transition: box-shadow 0.15s, transform 0.15s; overflow: hidden; }
+    .event-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.18); transform: translateY(-2px); }
+    .event-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); padding: 5px 10px; margin-bottom: 12px; border-radius: 2px; }
+    .event-badge .mo { font-size: 9.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--charcoal); }
+    .event-badge .dy { font-size: 13px; font-weight: 800; color: var(--charcoal); line-height: 1; }
+    .event-title { font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 6px; line-height: 1.25; letter-spacing: -0.01em; }
+    .event-meta { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px; }
+    .event-desc { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+    .event-cta { display: inline-block; margin-top: 14px; padding: 9px 16px; text-decoration: none; font-weight: 800; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 3px; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; }
+    .event-cta-primary { background: var(--gold); color: var(--charcoal); box-shadow: 0 2px 8px rgba(255,184,28,0.35); }
+    .event-cta-primary:hover { background: #e5a519; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,184,28,0.45); }
+    .event-cta-secondary { background: var(--charcoal); color: var(--white); }
+    .event-cta-secondary:hover { background: #1E1E1C; transform: translateY(-1px); }
+
+    /* EVENTS LEAD, HERO BLOCK ABOVE THE GRID */
+    .events-lead { margin-bottom: 24px; padding: 22px 26px; background: rgba(255,255,255,0.06); border-left: 4px solid var(--gold); position: relative; overflow: hidden; }
+    .events-lead::after { content:''; position:absolute; top:-30px; right:-20px; width:140px; height:140px; border-radius:50%; background: rgba(255,184,28,0.05); pointer-events:none; }
+    .events-lead-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; position:relative; z-index:1; }
+    .events-lead-hed { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; font-weight: 700; color: var(--white); line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.01em; position:relative; z-index:1; }
+    .events-lead-hed em { font-style: italic; color: var(--gold); }
+    .events-lead-body { font-size: 13.5px; color: rgba(255,255,255,0.85); line-height: 1.7; margin: 0; position:relative; z-index:1; }
+
+    /* REQUIREMENT CARD, GOLD GRADIENT FOR POP */
+    .req-card { background: linear-gradient(135deg, var(--gold) 0%, #e5a519 100%); color: var(--charcoal); padding: 0; text-align: center; border: none; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .req-card::before { content:''; position:absolute; bottom:-30px; left:-30px; width:120px; height:120px; border-radius:50%; background:rgba(255,255,255,0.12); }
+    .req-card-inner { padding: 28px 20px; position:relative; z-index:1; }
+    .req-card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--charcoal); opacity: 0.7; margin-bottom: 8px; }
+    .req-card-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 56px; font-weight: 700; font-style: italic; color: var(--charcoal); line-height: 0.95; margin-bottom: 2px; }
+    .req-card-text { font-size: 13px; font-weight: 800; color: var(--charcoal); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+    .req-card-note { font-size: 10.5px; color: rgba(0,0,0,0.55); font-weight: 700; line-height: 1.45; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* URGENT HRIS CALLOUT */
+    .urgent-callout { margin: 0 -52px 32px; background: linear-gradient(135deg, var(--charcoal) 0%, #1E1E1C 100%); color: var(--white); padding: 32px 48px 28px; position: relative; overflow: hidden; border-top: 4px solid var(--gold); border-bottom: 4px solid var(--gold); }
+    .urgent-callout::before { content:''; position:absolute; top:-40px; right:-40px; width:240px; height:240px; border-radius:50%; background:rgba(255,184,28,0.05); pointer-events:none; }
+    .urgent-callout::after { content:''; position:absolute; bottom:-30px; left:-30px; width:160px; height:160px; border-radius:50%; background:rgba(255,184,28,0.04); pointer-events:none; }
+    .urgent-eyebrow { display: inline-block; background: var(--gold); color: var(--charcoal); padding: 6px 14px; font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; border-radius: 2px; box-shadow: 0 4px 14px rgba(255,184,28,0.3); position: relative; z-index: 2; }
+    .urgent-hed { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; font-weight: 700; color: var(--white); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.01em; position: relative; z-index: 2; }
+    .urgent-hed em { font-style: italic; color: var(--gold); }
+    .urgent-subhed { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.65; margin: 0 0 22px; max-width: 720px; position: relative; z-index: 2; }
+    .urgent-subhed b { color: var(--gold); font-weight: 800; }
+    .urgent-trainings { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; position: relative; z-index: 2; }
+    .urgent-training-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,184,28,0.3); border-left: 4px solid var(--gold); padding: 16px 20px; }
+    .urgent-training-required { display: inline-block; background: var(--gold); color: var(--charcoal); padding: 3px 9px; font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; border-radius: 2px; }
+    .urgent-training-audience { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+    .urgent-training-date { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 700; font-style: italic; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .urgent-training-time { font-size: 13px; font-weight: 700; color: var(--white); }
+    .urgent-body { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; margin-bottom: 22px; position: relative; z-index: 2; }
+    .urgent-body-block h4 { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
+    .urgent-body-block p { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.65; margin: 0; }
+    .urgent-footer { padding-top: 18px; border-top: 1px solid rgba(255,184,28,0.25); display: grid; grid-template-columns: 1fr 1fr; gap: 18px; position: relative; z-index: 2; }
+    .urgent-footer-block { font-size: 12.5px; color: rgba(255,255,255,0.85); line-height: 1.55; }
+    .urgent-footer-block b { color: var(--gold); display: block; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; font-weight: 800; }
+    .urgent-footer-block a { color: var(--white); text-decoration: none; border-bottom: 1px solid rgba(255,184,28,0.5); transition: border-color 0.15s; }
+    .urgent-footer-block a:hover { border-bottom-color: var(--gold); }
+
+    /* SECTION IMAGES */
+    .feature-hero-img { margin: 6px 0 26px; height: 240px; overflow: hidden; }
+    .feature-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .feature-stat-hero { width: 100%; height: 100%; display: flex; align-items: center; gap: 36px; padding: 28px 38px; background: linear-gradient(90deg, #F9F9F7 0%, #F4F0E8 100%); box-sizing: border-box; position: relative; overflow: hidden; border-left: 5px solid var(--gold); }
+    .feature-stat-hero::before { content:''; position:absolute; bottom:-100px; right:-60px; width:260px; height:260px; border-radius:50%; background:rgba(0,83,76,0.06); pointer-events:none; }
+    .feature-stat-hero::after { content:''; position:absolute; top:-30px; right:60px; width:100px; height:100px; border-radius:50%; background:rgba(255,184,28,0.10); pointer-events:none; }
+    .feature-stat-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 140px; font-style: italic; font-weight: 700; color: var(--green); line-height: 0.88; letter-spacing: -0.04em; flex-shrink: 0; position: relative; z-index: 1; }
+    .feature-stat-content { flex: 1; position: relative; z-index: 1; }
+    .feature-stat-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .feature-stat-eyebrow::before { content:''; display:inline-block; width:28px; height:2px; background:var(--gold); flex-shrink:0; }
+    .feature-stat-headline { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 700; color: var(--text); line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.01em; }
+    .feature-stat-headline em { font-style: italic; color: var(--gold); }
+    .feature-stat-body { font-size: 13px; color: var(--text-mid); font-style: italic; line-height: 1.6; margin: 0 0 14px; }
+    .feature-stat-source { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); }
+    .feature-stat-source a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,184,28,0.5); padding-bottom: 1px; transition: color 0.15s, border-color 0.15s; }
+    .feature-stat-source a:hover { color: var(--green); border-bottom-color: var(--gold); }
+
+    /* AEC INDUSTRY READS GRID */
+    .reads-intro { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 600; font-style: italic; color: var(--green); line-height: 1.5; margin: 4px 0 22px; letter-spacing: -0.005em; }
+    .reads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 18px; }
+    .read-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 18px 22px 16px; text-decoration: none; transition: box-shadow 0.15s, transform 0.15s, border-left-color 0.15s; }
+    .read-card:hover { box-shadow: 0 6px 22px rgba(0,83,76,0.10); transform: translateY(-2px); border-left-color: var(--gold); }
+    .read-card-source { font-size: 9.5px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+    .read-card-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.22; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .read-card-summary { font-size: 13px; color: var(--text-mid); line-height: 1.55; margin-bottom: 14px; flex: 1; }
+    .read-card-link { font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green); padding-bottom: 1px; border-bottom: 1.5px solid var(--gold); align-self: flex-start; }
+
+    /* UPCOMING EVENTS SUBLIST IN RESOURCES */
+    .res-sub-head { margin: 30px 0 14px; display: flex; align-items: center; gap: 12px; }
+    .res-sub-label { font-size: 10.5px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); white-space: nowrap; }
+    .res-sub-line { flex: 1; height: 1px; background: var(--rule); }
+    .events-li-list { list-style: none; padding: 0; margin: 0; }
+    .event-li { display: flex; align-items: center; gap: 16px; padding: 12px 4px; border-bottom: 1px solid var(--rule); transition: background 0.15s; }
+    .event-li:last-child { border-bottom: none; }
+    .event-li:hover { background: var(--off-white); }
+    .event-li-date { display: inline-flex; flex-direction: column; align-items: center; background: var(--gold); padding: 6px 10px; border-radius: 2px; flex-shrink: 0; min-width: 52px; line-height: 1; }
+    .event-li-date .mo { font-size: 9px; font-weight: 800; letter-spacing: 0.14em; color: var(--charcoal); text-transform: uppercase; }
+    .event-li-date .day { font-size: 17px; font-weight: 800; color: var(--charcoal); margin-top: 3px; line-height: 1; }
+    .event-li-title { flex: 1; font-size: 13.5px; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .event-li-link { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); text-decoration: none; border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; flex-shrink: 0; }
+    .ww-webinar-img { width: 100%; height: 180px; object-fit: cover; display: block; margin: 0 0 20px; }
+    .challenge-img { width: 100%; height: 170px; object-fit: cover; display: block; margin-bottom: 20px; }
+.win-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('https://www.stambaughness.com/wp-content/uploads/2022/03/Square-SN-Color-Logo-300.jpg.webp');
+  background-size: cover;      /* fills circle */
+  background-position: center; /* centers image */
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}    .urgent-hero { width: calc(100% + 96px); height: 140px; object-fit: cover; display: block; margin: -32px -48px 24px; }
+    .win-callout { background: var(--green); padding: 22px 28px; display: flex; align-items: center; gap: 20px; }
+    .win-icon { font-size: 32px; flex-shrink: 0; }
+    .win-label { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .win-text { font-size: 15px; font-weight: 600; color: var(--white); line-height: 1.5; }
+    .aec-awards { background: #1E2A3A; margin: 28px -52px 0; padding: 36px 52px 32px; position: relative; overflow: hidden; }
+    .aec-awards::before { content:'⭐'; position:absolute; top:-30px; right:32px; font-size:200px; opacity:0.07; color:var(--gold); pointer-events:none; user-select:none; line-height:1; }
+    .aec-eyebrow { font-size:10px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; position:relative; z-index:1; }
+    .aec-title { font-family:'Cormorant Garamond', Georgia, serif; font-size:34px; font-weight:700; color:#fff; line-height:1.1; letter-spacing:-0.01em; margin-bottom:6px; position:relative; z-index:1; }
+    .aec-title em { font-style:italic; color:var(--gold); }
+    .aec-subtitle { font-size:13px; font-weight:800; letter-spacing:0.06em; color:rgba(255,255,255,0.7); text-transform:uppercase; margin-bottom:14px; position:relative; z-index:1; }
+    .aec-credit { font-size:11.5px; font-style:italic; color:rgba(255,255,255,0.65); margin-bottom:22px; position:relative; z-index:1; max-width:760px; }
+    .aec-credit a { color:var(--gold); font-weight:700; font-style:normal; text-decoration:none; border-bottom:1px solid rgba(255,184,28,0.4); transition:border-color 0.15s; }
+    .aec-credit a:hover { border-bottom-color:var(--gold); }
+    .aec-desc { font-size:13.5px; color:rgba(255,255,255,0.78); line-height:1.7; max-width:760px; margin-bottom:20px; position:relative; z-index:1; }
+    .aec-desc b { color:#fff; }
+    .aec-desc + .aec-desc { margin-top:-4px; }
+    .aec-categories { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:0 0 22px; max-width:760px; position:relative; z-index:1; }
+    .aec-cat-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,184,28,0.22); border-top:3px solid var(--gold); padding:16px 12px; border-radius:2px; text-align:center; }
+    .aec-cat-label { font-size:10px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+    .aec-cat-detail { font-size:12.5px; font-weight:700; color:#fff; line-height:1.4; }
+    .aec-bottom-row { display:flex; align-items:center; gap:18px; flex-wrap:wrap; position:relative; z-index:1; }
+    .aec-deadline { display:inline-flex; flex-direction:column; padding:9px 16px; background:rgba(255,184,28,0.10); border-left:3px solid var(--gold); border-radius:2px; }
+    .aec-deadline-label { font-size:9px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); }
+    .aec-deadline-date { font-size:14px; font-weight:800; color:#fff; }
+    .aec-cta { display:inline-flex; align-items:center; gap:7px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#1E2A3A; background:var(--gold); text-decoration:none; padding:13px 22px; flex-shrink:0; white-space:nowrap; transition:background 0.15s, transform 0.15s; }
+    .aec-cta:hover { background:#FFC93C; transform:translateY(-1px); }
+    .aec-save-date { margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.15); font-size:12px; color:rgba(255,255,255,0.7); position:relative; z-index:1; }
+    .aec-save-date-label { font-size:9px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-right:8px; }
+    .aec-save-date-link { color:#fff; font-weight:800; text-decoration:none; border-bottom:1px solid var(--gold); transition:color 0.15s; }
+    .aec-save-date-link:hover { color:var(--gold); }
+    .aec-save-date-detail { color:rgba(255,255,255,0.6); }
+
+    /* EMPLOYEE VOICES, PARCHMENT CREAM, 2-COL TEXT WITH NESTED PHOTO */
+    .voices-block { background: #F5EFE5; border-top: 4px solid var(--green); margin: 0 -52px; padding: 36px 52px 32px; position: relative; overflow: hidden; }
+    .voices-block::before { content:'☆'; position:absolute; top:-30px; right:32px; font-size:200px; opacity:0.05; color: var(--green); pointer-events:none; user-select:none; line-height:1; }
+    .voices-eyebrow { font-size:10px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); margin-bottom:14px; position:relative; z-index:1; }
+    .voices-quote { font-family:'Cormorant Garamond', Georgia, serif; font-size:30px; font-weight:600; font-style:italic; color:#1E1E1C; line-height:1.25; letter-spacing:-0.005em; margin:0 0 18px; max-width:820px; position:relative; z-index:1; }
+    .voices-quote em { color:var(--green); font-style:italic; }
+    .voices-byline { display:flex; flex-direction:column; gap:2px; margin-bottom:24px; padding-bottom:18px; border-bottom:1px solid rgba(0,0,0,0.12); position:relative; z-index:1; max-width:820px; }
+    .voices-byline-name { font-size:14px; font-weight:700; color:#1E1E1C; }
+    .voices-byline-name a { color:var(--green); text-decoration:none; border-bottom:1px solid rgba(0,83,76,0.35); transition:border-color 0.15s; }
+    .voices-byline-name a:hover { border-bottom-color:var(--green); }
+    .voices-byline-role { font-size:12px; color:rgba(0,0,0,0.55); letter-spacing:0.02em; }
+    .voices-body { column-count:2; column-gap:32px; column-fill:balance; font-size:13.5px; line-height:1.75; color:rgba(0,0,0,0.75); position:relative; z-index:1; }
+    .voices-body p { margin:0 0 12px; break-inside:avoid; }
+    .voices-body em { font-style:italic; color:#1E1E1C; }
+    .voices-body a { color:var(--green); font-weight:700; text-decoration:none; border-bottom:1px solid rgba(0,83,76,0.35); }
+    .voices-body a:hover { border-bottom-color:var(--green); }
+    .voices-figure { column-span:all; margin:18px 0 22px; break-inside:avoid; }
+    .voices-figure img { width:100%; height:auto; max-height:380px; object-fit:cover; display:block; border:1px solid rgba(0,0,0,0.10); border-radius:2px; }
+    .voices-figure figcaption { margin-top:8px; font-size:11px; font-style:italic; color:rgba(0,0,0,0.50); }
+    .voices-hashtag { margin-top:18px; font-size:12px; color:rgba(0,0,0,0.50); font-weight:700; letter-spacing:0.05em; position:relative; z-index:1; }
+    .voices-attrib { margin-top:22px; padding-top:16px; border-top:1px solid rgba(0,0,0,0.12); font-size:11px; color:rgba(0,0,0,0.50); font-style:italic; display:flex; align-items:center; gap:8px; flex-wrap:wrap; position:relative; z-index:1; }
+    .voices-attrib a { color:var(--green); font-weight:700; text-decoration:none; border-bottom:1px solid rgba(0,83,76,0.35); font-style:normal; }
+    .voices-attrib a:hover { border-bottom-color:var(--green); }
+    /* DECORATIVE FEATURE-SPOTLIGHT NUMBERS */
+    .num-deco { position: absolute; top: 16px; right: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 110px; font-weight: 700; font-style: italic; line-height: 0.85; color: var(--gold); opacity: 0.40; pointer-events: none; user-select: none; z-index: 0; letter-spacing: -0.04em; }
+    .num-deco .num-deco-label { display: block; font-family: 'Open Sans', sans-serif; font-size: 9px; font-weight: 800; font-style: normal; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-light); opacity: 0.85; margin-bottom: -4px; line-height: 1; text-align: right; }
+    .feature-spotlight-numbered { position: relative; }
+
+    /* PARTNERSHIP INTRO */
+    .partnership-intro { font-size:14px; color:var(--text-mid); line-height:1.7; margin-bottom:0; max-width:760px; }
+
+    /* Q2 WELLNESS CHALLENGE, VERTICAL SIDE BANNER */
+    .challenge-block { display:grid; grid-template-columns:230px 1fr; gap:0; margin:0 -52px; }
+    .challenge-banner { background: linear-gradient(180deg, var(--green) 0%, #003a35 100%); color:var(--white); padding:40px 24px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; position:relative; overflow:hidden; }
+    .challenge-banner::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--gold); }
+    .challenge-banner::after { content:''; position:absolute; bottom:-40px; right:-40px; width:160px; height:160px; border-radius:50%; background:rgba(255,184,28,0.06); }
+    .cb-quarter { font-family:'Cormorant Garamond', Georgia, serif; font-size:60px; font-weight:700; font-style:italic; color:var(--gold); line-height:1; margin-bottom:2px; position:relative; z-index:1; }
+    .cb-divider { width:32px; height:2px; background:var(--gold); opacity:0.55; margin:10px 0 18px; }
+    .cb-icon { font-size:52px; line-height:1; margin:8px 0 16px; }
+    .cb-title { font-family:'Cormorant Garamond', Georgia, serif; font-size:26px; font-weight:700; line-height:1.12; color:var(--white); margin-bottom:6px; position:relative; z-index:1; }
+    .cb-title em { font-style:italic; color:var(--gold); }
+    .cb-subtitle { font-size:11px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:24px; position:relative; z-index:1; }
+    .cb-bottom { margin-top:auto; padding-top:18px; border-top:1px solid rgba(255,184,28,0.35); width:100%; position:relative; z-index:1; }
+    .cb-month { font-family:'Cormorant Garamond', Georgia, serif; font-size:34px; font-weight:700; font-style:italic; color:var(--gold); line-height:1; }
+    .cb-year { font-size:11px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-top:4px; }
+
+    .challenge-content { background:var(--off-white); padding:36px 36px 32px; }
+    .challenge-content-eyebrow { font-size:10px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+    .challenge-content-hed { font-family:'Cormorant Garamond', Georgia, serif; font-size:26px; font-weight:700; color:var(--text); line-height:1.2; margin:0 0 14px; letter-spacing:-0.01em; }
+    .challenge-content-hed em { font-style:italic; color:var(--green); }
+    .challenge-intro { font-size:14px; color:var(--text-mid); line-height:1.7; margin-bottom:22px; }
+    .challenge-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:18px; }
+    .challenge-card { background:var(--white); border:1px solid var(--rule); border-left:3px solid var(--gold); padding:14px 18px; }
+    .cc-label { font-size:9.5px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+    .challenge-card p { font-size:13px; color:var(--text-mid); line-height:1.6; margin:0 0 8px; }
+    .challenge-card p:last-child { margin-bottom:0; }
+    .cc-weeks { list-style:none; margin:8px 0 4px; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:4px 16px; }
+    .cc-weeks li { font-size:12px; color:var(--text-mid); padding:3px 0; }
+    .cc-weeks li b { color:var(--green); font-weight:800; }
+    .cc-bonus { background:var(--gold-pale); border-left:2px solid var(--gold); padding:9px 13px; margin-top:10px; font-size:12.5px; color:var(--text-mid); line-height:1.55; }
+    .cc-bonus b { color:var(--text); }
+    .challenge-dates { background:var(--white); border:1px solid var(--rule); padding:14px 18px; margin-bottom:18px; }
+    .cd-row { display:flex; justify-content:space-between; align-items:baseline; padding:7px 0; border-bottom:1px solid var(--rule); gap:12px; }
+    .cd-row:last-child { border-bottom:none; }
+    .cd-label { font-size:9.5px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-light); flex-shrink:0; }
+    .cd-value { font-size:13px; font-weight:700; color:var(--text); text-align:right; }
+    .challenge-footer { font-size:12px; color:var(--text-light); font-style:italic; line-height:1.65; padding-top:14px; border-top:1px solid var(--rule); }
+    .challenge-footer b { color:var(--text-mid); font-style:normal; }
+
+    /* LIVE EVENTS, COMPLEMENTARY VERTICAL SIDE BANNER */
+    .events-banner-block { display:grid; grid-template-columns:230px 1fr; gap:0; margin:0 -52px -40px; }
+    .events-banner { background: linear-gradient(180deg, var(--charcoal) 0%, #1E1E1C 100%); color:var(--white); padding:40px 24px 32px; display:flex; flex-direction:column; align-items:center; text-align:center; position:relative; overflow:hidden; }
+    .events-banner::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--gold); }
+    .events-banner::after { content:''; position:absolute; bottom:-40px; right:-40px; width:160px; height:160px; border-radius:50%; background:rgba(255,184,28,0.06); }
+    .eb-quarter { font-family:'Cormorant Garamond', Georgia, serif; font-size:60px; font-weight:700; font-style:italic; color:var(--gold); line-height:1; margin-bottom:2px; position:relative; z-index:1; }
+    .eb-divider { width:32px; height:2px; background:var(--gold); opacity:0.55; margin:10px 0 18px; }
+    .eb-icon { font-size:48px; line-height:1; margin:6px 0 16px; }
+    .eb-title { font-family:'Cormorant Garamond', Georgia, serif; font-size:28px; font-weight:700; line-height:1.12; color:var(--white); margin-bottom:6px; position:relative; z-index:1; }
+    .eb-title em { font-style:italic; color:var(--gold); }
+    .eb-subtitle { font-size:11px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:24px; position:relative; z-index:1; }
+    .eb-bottom { margin-top:auto; padding-top:18px; border-top:1px solid rgba(255,184,28,0.35); width:100%; position:relative; z-index:1; }
+    .eb-month { font-family:'Cormorant Garamond', Georgia, serif; font-size:30px; font-weight:700; font-style:italic; color:var(--gold); line-height:1; }
+    .eb-year { font-size:11px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-top:4px; }
+    .events-content-col { padding:28px 32px 40px; }
+
+    /* SNAPSHOT BLURB WITH READ MORE */
+    .snapshot-blurb { padding:18px 22px 20px; background:var(--off-white); border-top:1px solid var(--rule); }
+    .snapshot-blurb-eyebrow { font-size:9.5px; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); margin-bottom:6px; }
+    .snapshot-blurb-title { font-family:'Cormorant Garamond', Georgia, serif; font-size:20px; font-weight:700; color:var(--text); line-height:1.25; margin-bottom:10px; letter-spacing:-0.01em; }
+    .snapshot-blurb-title em { font-style:italic; color:var(--green); }
+    .snapshot-blurb-body { font-size:13px; color:var(--text-mid); line-height:1.65; margin-bottom:12px; }
+    .snapshot-blurb-cta { display:inline-flex; align-items:center; gap:6px; font-size:10.5px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); text-decoration:none; padding-bottom:2px; border-bottom:2px solid var(--gold); transition:color 0.15s; }
+    .snapshot-blurb-cta:hover { color:var(--green-dark); }
+
+    /* WISE & WELL, WELLNESS PARTNER RESOURCES */
+    .ww-intro { font-size:14px; color:var(--text-mid); line-height:1.7; margin-bottom:22px; max-width:760px; }
+    .ww-intro b { color:var(--text); }
+    .ww-webinar { background:var(--white); border:1px solid var(--rule); border-left:4px solid var(--teal); padding:28px 30px; margin-bottom:20px; }
+    .ww-webinar-tag { display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); background:rgba(0,118,129,0.08); padding:4px 10px; border-radius:2px; margin-bottom:14px; }
+    .ww-webinar-title { font-family:'Cormorant Garamond', Georgia, serif; font-size:28px; font-weight:700; color:var(--text); line-height:1.15; margin-bottom:4px; letter-spacing:-0.01em; }
+    .ww-webinar-subtitle { font-size:14px; font-style:italic; color:var(--text-mid); margin-bottom:16px; }
+    .ww-webinar-desc { font-size:13.5px; color:var(--text-mid); line-height:1.7; margin-bottom:18px; }
+    .ww-webinar-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:14px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); margin-bottom:18px; }
+    .ww-detail-label { font-size:9px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); margin-bottom:5px; }
+    .ww-detail-value { font-size:13px; font-weight:700; color:var(--text); line-height:1.45; }
+    .ww-webinar-learn { margin-bottom:22px; }
+    .ww-webinar-learn-label { font-size:9px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); margin-bottom:10px; }
+    .ww-webinar-learn ul { list-style:none; margin:0; padding:0; }
+    .ww-webinar-learn li { font-size:13px; color:var(--text-mid); line-height:1.55; padding:5px 0 5px 22px; position:relative; }
+    .ww-webinar-learn li::before { content:'✓'; position:absolute; left:0; top:5px; color:var(--green); font-weight:800; }
+    .ww-webinar-cta { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; background:var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; border-radius:2px; transition:background 0.15s, transform 0.15s; }
+    .ww-webinar-cta:hover { background:var(--green-dark); transform:translateY(-1px); }
+    .ww-webinar-note { font-size:11.5px; font-style:italic; color:var(--text-light); margin-top:14px; line-height:1.55; }
+    .ww-monthly { background:var(--gold-pale); border-left:3px solid var(--gold); padding:20px 24px; }
+    .ww-monthly-header { display:flex; align-items:baseline; gap:14px; margin-bottom:14px; flex-wrap:wrap; }
+    .ww-monthly-tag { font-size:9.5px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); }
+    .ww-monthly-title { font-size:15px; font-weight:800; color:var(--text); }
+    .ww-monthly-list { list-style:none; margin:0; padding:0; }
+    .ww-monthly-list li { font-size:12.5px; color:var(--text-mid); line-height:1.6; padding:8px 0; border-top:1px solid rgba(0,0,0,0.06); }
+    .ww-monthly-list li:first-child { border-top:none; padding-top:2px; }
+    .ww-monthly-list li b { color:var(--text); }
+    .funfact { background: var(--gold-pale); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 28px 32px; display: flex; gap: 24px; align-items: flex-start; overflow: hidden; box-sizing: border-box; }
+    .funfact-logo { flex-shrink: 0; }
+    .funfact-body { flex: 1; min-width: 0; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word; }
+    .funfact-label { font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .funfact-name { font-size: 16px; font-weight: 800; color: var(--green); margin-bottom: 8px; }
+    .funfact-text { font-size: 14px; color: var(--text-mid); line-height: 1.7; word-wrap: break-word; overflow-wrap: break-word; }
+    .spotlight { background: #004A53; margin: 0 -52px; padding: 40px 52px; }
+    .spotlight .sec-label { color: rgba(255,255,255,0.6); }
+    .spotlight .sec-line { background: rgba(255,255,255,0.18); }
+    .spotlight-name { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .spotlight-hed { font-size: 22px; font-weight: 800; color: var(--white); line-height: 1.3; margin-bottom: 12px; }
+    .spotlight-body { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.75; }
+    .ann-list { list-style: none; }
+    .ann-item { display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: start; }
+    .ann-item:last-child { border-bottom: none; }
+    .ann-pip { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-top: 7px; justify-self: center; }
+    .ann-title { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .ann-body { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+    .rec-wrap { background: var(--off-white); border-top: 2px solid var(--gold); padding: 32px; margin: 0 -52px; padding-left: 52px; padding-right: 52px; }
+    .rec-intro { font-size: 13px; font-style: italic; color: var(--text-mid); margin-bottom: 24px; }
+    .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .rec-card { background: var(--white); border: 1px solid var(--rule); padding: 18px; display: flex; gap: 13px; align-items: flex-start; }
+    .rec-av { width: 38px; height: 38px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: var(--gold); flex-shrink: 0; }
+    .rec-name { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+    .rec-role { font-size: 10.5px; color: var(--text-light); margin-bottom: 6px; letter-spacing: 0.03em; }
+    .rec-note { font-size: 12px; color: var(--text-mid); font-style: italic; line-height: 1.55; }
+    .res-list { list-style: none; }
+    .res-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--rule); gap: 16px; }
+    .res-item:last-child { border-bottom: none; }
+    .res-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 2px; }
+    .res-title { font-size: 13.5px; font-weight: 600; color: var(--text); }
+    .res-cta { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); text-decoration: none; padding: 6px 12px; border: 1.5px solid var(--green); white-space: nowrap; transition: background 0.15s, color 0.15s; }
+    .res-cta:hover { background: var(--green); color: var(--white); }
+    .photo-moment { background: var(--light-gray); border: 1px solid var(--rule); overflow: hidden; }
+    .photo-placeholder { background: var(--mid-gray); height: 200px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+    .photo-placeholder-icon { font-size: 36px; opacity: 0.4; }
+    .photo-placeholder-text { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); }
+    .photo-caption { padding: 14px 18px; font-size: 12px; font-style: italic; color: var(--text-mid); border-top: 1px solid var(--rule); }
+    .footer { margin-top: 56px; background: var(--charcoal); padding: 32px 52px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .footer-wm { font-size: 14px; font-weight: 800; color: var(--white); }
+    .footer-wm span { color: var(--gold); }
+    .footer-sub { font-size: 10px; color: rgba(255,255,255,0.38); letter-spacing: 0.09em; margin-top: 3px; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { background: var(--green-dark); padding: 11px 52px; text-align: center; font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 0.07em; }
+    .en { display: inline-block; background: #fffde7; border: 1px dashed var(--gold); border-radius: 2px; padding: 0 5px; font-size: 9.5px; font-style: normal; color: #7a5a00; margin-left: 4px; font-weight: 700; vertical-align: middle; }
+    @media (max-width: 580px) {
+      .masthead, .content, .leadership, .rec-wrap, .spotlight, .footer, .footer-bottom, .nav, .archive-callout, .aec-awards { padding-left: 24px; padding-right: 24px; }
+      .leadership, .rec-wrap, .spotlight, .aec-awards { margin: 0 -24px; }
+      .funfact { flex-direction: column; gap: 12px; }
+      .win-callout { flex-direction: column; gap: 14px; align-items: flex-start; }
+      .events-grid, .rec-grid, .course-grid, .aec-categories, .ww-webinar-grid, .reads-grid { grid-template-columns: 1fr; }
+      .event-li { flex-wrap: wrap; }
+      .event-li-title { font-size: 13px; flex: 1 1 60%; }
+      .challenge-block { grid-template-columns: 1fr; margin: 0 -24px; }
+      .challenge-banner { padding: 28px 24px; }
+      .challenge-content { padding: 28px 24px; }
+      .cc-weeks { grid-template-columns: 1fr; }
+      .events-banner-block { grid-template-columns: 1fr; margin: 0 -24px -28px; }
+      .events-banner { padding: 28px 24px; }
+      .events-content-col { padding: 24px 24px 28px; }
+      .urgent-callout { margin: 0 -24px 24px; padding: 24px 24px 22px; }
+      .urgent-trainings, .urgent-body, .urgent-footer { grid-template-columns: 1fr; }
+      .urgent-hed { font-size: 28px; }
+      .feature-hero-img { height: 180px; }
+      .feature-hero-img:has(.feature-stat-hero) { height: auto; }
+      .feature-stat-hero { flex-direction: column; align-items: flex-start; gap: 14px; padding: 24px 22px; }
+      .feature-stat-num { font-size: 88px; }
+      .feature-stat-headline { font-size: 22px; }
+      .ww-webinar-img { height: 150px; }
+      .challenge-img { height: 140px; }
+      .urgent-hero { width: calc(100% + 48px); margin: -24px -24px 18px; height: 110px; }
+      .aec-bottom-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .voices-block { padding-left: 24px; padding-right: 24px; margin: 0 -24px; }
+      .voices-body { column-count: 1; }
+      .voices-quote { font-size: 22px; }
+      .voices-figure { margin: 14px 0 18px; }
+      .voices-figure img { max-height: 260px; }
+      .masthead { flex-direction: column; align-items: flex-start; }
+      .masthead-right { text-align: left; }
+      .footer { flex-direction: column; }
+      .archive-callout { justify-content: flex-start; }
+      .archive-card { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page" style="position:relative;">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-left">
+      <div class="newsletter-title">SN <em>Pulse</em></div>
+      <div class="issue-label" style="margin-top:8px;">Internal Communications Newsletter</div>
+    </div>
+    <div class="masthead-right">
+      <img src="https://www.stambaughness.com/wp-content/uploads/2016/11/Stambaugh-Ness-Main-Logo-1-1.png" alt="Stambaugh Ness" style="height:42px;display:block;margin-bottom:10px;margin-left:auto;"/>
+      <div class="issue-date">June 2026</div>
+      <div class="issue-vol">Vol. 1 &nbsp;·&nbsp; Issue 3</div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#leadership">Leadership</a>
+    <a href="#feature">Feature</a>
+    <a href="#reads">Industry Reads</a>
+    <a href="#policy">1:1 Update</a>
+    <a href="#events">Live Events</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <!-- ARCHIVE CALLOUT -->
+  <div class="archive-callout">
+    <a href="https://stambaughness.github.io/SN-Pulse/archive/2026-05/" class="archive-card" target="_blank" rel="noopener">
+      <span class="archive-icon">📰</span>
+      <div class="archive-meta">
+        <div class="archive-eyebrow">From the Archive</div>
+        <div class="archive-title">Read the May 2026 issue</div>
+      </div>
+      <span class="archive-cta">Read →</span>
+    </a>
+  </div>
+
+  <main class="content">
+
+    <!-- LEADERSHIP -->
+    <section id="leadership">
+      <div class="leadership">
+        <div class="sec-head" style="margin-top:0">
+          <span class="sec-label">From People & Culture</span>
+          <div class="sec-line"></div>
+          <div class="sec-pip"></div>
+        </div>
+        <blockquote class="leadership-quote">
+          "Strong teams aren't built on more meetings, they're built on the conversations worth having. Whether it's a 1:1, a feedback exchange, or a moment of recognition between colleagues, the quality of how we talk to each other shapes the quality of what we build together. As we shift our cadence, my hope is that we shift our standard, too. Show up prepared. Ask the harder question. Make every conversation count."
+        </blockquote>
+        <div class="attrib">
+          <div style="width:42px;height:42px;border-radius:50%;background:var(--gold);padding:2px;flex-shrink:0;box-sizing:border-box;">
+            <img src="https://www.stambaughness.com/wp-content/uploads/2023/04/Carly-Newton-2023-square-300x300.jpg.webp" alt="[Carly Newton]" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;"/>
+          </div>
+          <div>
+            <div class="attrib-name">Carly Newton</div>
+            <div class="attrib-title">People Business Partner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE ARTICLE, SPOTLIGHT 1 -->
+    <section id="feature" class="feature-spotlight-numbered"><div class="num-deco">1</div>
+      <div class="sec-head">
+        <span class="sec-label">Feature Spotlights</span>
+        <div class="sec-line"></div>
+        <div class="sec-pip"></div>
+      </div>
+
+      <div class="feature-kicker">Skills &amp; Performance Institute · Leadership Development</div>
+      <h2 class="feature-hed">Great Managers Aren't Born. They're Built One Conversation at a Time.</h2>
+
+      <div class="feature-hero-img">
+        <div class="feature-stat-hero">
+          <div class="feature-stat-num">70%</div>
+          <div class="feature-stat-content">
+            <div class="feature-stat-eyebrow">Workplace Leadership Data</div>
+            <h3 class="feature-stat-headline">of the variance in team engagement traces back to <em>the manager</em>.</h3>
+            <p class="feature-stat-body">When managers grow, teams change. When they don't, neither does the work.</p>
+            <div class="feature-stat-source">Source · <a href="https://www.gallup.com/workplace/231593/state-american-manager.aspx" target="_blank" rel="noopener">Gallup · State of the American Manager</a></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="feature-dek"><em>This month, SPI introduces a Leadership Development catalog, practical courses for people leaders (and those that follow them) on the conversations that shape how the work gets done.</em></p>
+
+      <div class="feature-body">
+        <p><b>The hardest parts of leadership rarely show up on a Gantt chart.</b> They appear in the feedback that never gets shared, the conflict that goes unaddressed, or the team member who's quietly disengaging while everyone assumes they're fine.</p>
+
+<p>Leadership Development in SPI is built for those moments: the conversations between the milestones that often determine whether a team grows, adapts, and succeeds.</p>
+
+<p>These short, scenario-based courses focus on real leadership challenges and practical communication skills. Because in leadership, what you say, and how you say it—can shape trust, performance, engagement, and outcomes long after the conversation ends.</p>
+
+<p><b>A few of the courses available now:</b></p>
+        <div class="course-grid">
+          <a href="https://spi.stambaughness.com/learn/courses/847/performance-management-giving-feedback" target="_blank" rel="noopener" class="course-card">
+            <span class="course-badge-new">New</span>
+            <div class="course-img"><img src="https://www.talentlms.com/blog/wp-content/uploads/2025/12/Performance-Management-Process_15May2024b_big.png" alt="Two professionals in a focused feedback conversation"/></div>
+            <div class="course-tag">Performance Management</div>
+            <div class="course-title">Performance Management: Giving Feedback</div>
+            <div class="course-desc">Move from soft-pedaling to honest, useful feedback that actually changes the work. Practice the Situation-Behavior-Impact model and how to deliver it with care.</div>
+            <div class="course-meta">Free &middot; E-learning</div>
+          </a>
+          <a href="https://spi.stambaughness.com/learn/courses/852/resolving-conflict-with-coworkers" target="_blank" rel="noopener" class="course-card">
+            <span class="course-badge-new">New</span>
+            <div class="course-img"><img src="https://ap-southeast-2-seek-apac.graphassets.com/AEzBCRO50TYyqbV6XzRDQz/IMIGK1JwSRmFSGVZe1y8" alt="Colleagues in a candid working dialogue"/></div>
+            <div class="course-tag">Conflict Resolution</div>
+            <div class="course-title">Resolving Conflict with Co-Workers</div>
+            <div class="course-desc">Identify what's actually driving the disagreement, separate position from interest, and walk into harder conversations with a framework that works.</div>
+            <div class="course-meta">Free &middot; E-learning</div>
+          </a>
+          <a href="https://spi.stambaughness.com/learn/courses/850/develop-a-thriving-team" target="_blank" rel="noopener" class="course-card">
+            <span class="course-badge-new">New</span>
+            <div class="course-img"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Team collaborating around a shared table"/></div>
+            <div class="course-tag">Team Effectiveness</div>
+            <div class="course-title">Develop a Thriving Team</div>
+            <div class="course-desc">What makes a team go from good to great. Practical moves for building psychological safety, alignment, and the kind of trust that holds under pressure.</div>
+            <div class="course-meta">Free &middot; E-learning</div>
+          </a>
+          <a href="https://spi.stambaughness.com/learn/courses/858/leading-through-difficult-times" target="_blank" rel="noopener" class="course-card">
+            <span class="course-badge-new">New</span>
+            <div class="course-img"><img src="https://blogimage.vantagecircle.com/content/images/2021/01/change-leadership.png" alt="A path forward through difficult terrain"/></div>
+            <div class="course-tag">Adaptive Leadership</div>
+            <div class="course-title">Leading Through Difficult Times</div>
+            <div class="course-desc">How leaders show up when the path isn't clear, restructures, transitions, public mistakes. Lead with honesty without losing momentum.</div>
+            <div class="course-meta">Free &middot; E-learning</div>
+          </a>
+        </div>
+
+        <p style="margin-top:20px;">More leadership courses will continue dropping throughout the year. If there's a topic you'd like to see, submit a suggestion through the Newsletter Idea form in the footer.</p>
+      </div>
+
+      <a href="https://spi.stambaughness.com" target="_blank" rel="noopener" class="cta-link">Explore in SPI</a>
+    </section>
+
+    <div class="rule-gold"><div class="rule-gold-center"></div></div>
+
+    <!-- AEC INDUSTRY READS, SPOTLIGHT 2 -->
+    <section id="reads" class="feature-spotlight-numbered"><div class="num-deco">2</div>
+      <div class="sec-head">
+        <span class="sec-label">Industry Reads</span>
+        <div class="sec-line"></div>
+        <div class="sec-pip"></div>
+      </div>
+
+      <div class="feature-kicker">From the AEC Industry · June 2026</div>
+      <h2 class="feature-hed">Conversations Already Happening in Our Industry.</h2>
+      <p class="reads-intro"><em>A short reading list from across AEC, what firm leaders are saying about M&amp;A, ownership, talent, and the technology reshaping the work.</em></p>
+
+      <div class="reads-grid">
+        <a href="https://zweiggroup.com/blogs/the-zweig-letter/2026-aec-principals-partners-owners-report-trends" target="_blank" rel="noopener" class="read-card">
+          <div class="read-card-source">Zweig Group · The Zweig Letter</div>
+          <div class="read-card-title">2026 AEC Principals Report: Ownership and Leadership Trends</div>
+          <div class="read-card-summary">Median stock ownership purchased by new firm owners jumped from 16% to 25% year over year. New data on principal compensation, employment agreements, and the paths to ownership.</div>
+          <span class="read-card-link">Read →</span>
+        </a>
+        <a href="https://zweiggroup.com/blogs/the-zweig-letter/may-2026-m-a-transactions-in-aec" target="_blank" rel="noopener" class="read-card">
+          <div class="read-card-source">Zweig Group · The Zweig Letter</div>
+          <div class="read-card-title">May 2026 M&amp;A Transactions in AEC</div>
+          <div class="read-card-summary">A full roundup of last month's deal activity across architecture, engineering, and construction, who is buying, what they are buying, and what it signals for the rest of the year.</div>
+          <span class="read-card-link">Read →</span>
+        </a>
+        <a href="https://zweiggroup.com/blogs/the-zweig-letter/aec-governance-accountability-starts-with-clarity" target="_blank" rel="noopener" class="read-card">
+          <div class="read-card-source">Zweig Group · The Zweig Letter</div>
+          <div class="read-card-title">Building Stronger Boards: The Hard Work of Accountability</div>
+          <div class="read-card-summary">When commitments slide with a nod, trust quietly breaks down. A look at how AEC firm leaders can build independent oversight, audit their team's clarity, and turn agreements into action.</div>
+          <span class="read-card-link">Read →</span>
+        </a>
+        <a href="https://www.allplan.com/blog/from-ai-design-to-autonomous-construction-how-predictive-data-centric-workflows-and-ai-agents-are-reshaping-aec/" target="_blank" rel="noopener" class="read-card">
+          <div class="read-card-source">Allplan · Industry Outlook</div>
+          <div class="read-card-title">AI Trends in AEC for 2026: From Predictive Design to Autonomous Construction</div>
+          <div class="read-card-summary">A clear-eyed look at how AI is shifting AEC from document-driven work to continuous, data-driven decision-making across design, engineering, and construction.</div>
+          <span class="read-card-link">Read →</span>
+        </a>
+      </div>
+
+      <p style="font-size:12.5px;color:var(--text-light);font-style:italic;line-height:1.6;margin-top:14px;">Have an article, trend, or resource you think the firm should see? Submit it through the Newsletter Idea form in the footer.</p>
+    </section>
+
+    <div class="rule-gold"><div class="rule-gold-center"></div></div>
+
+    <!-- URGENT: 1:1 CADENCE POLICY UPDATE -->
+    <div class="urgent-callout" id="policy">
+      <img class="urgent-hero" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hbmFnZXIlMjBtZWV0aW5nfGVufDB8fDB8fHww" alt="Two professionals in a focused 1:1 conversation"/>
+      <div class="urgent-eyebrow">Action Required · Policy Update</div>
+      <h2 class="urgent-hed">Required 1:1s Shift to <em>Bi-Weekly</em>, Effective June 8.</h2>
+      <p class="urgent-subhed">To better balance manager capacity while maintaining consistency and accountability, required 1:1 meetings transition from a weekly to a bi-weekly cadence on <b>June 8, 2026</b>. Weekly cadence remains an option, and stays required for new hires and performance-managed employees through their first six months.</p>
+
+      <div class="urgent-trainings">
+        <div class="urgent-training-card">
+          <span class="urgent-training-required">Standard Cadence</span>
+          <div class="urgent-training-audience">All Managers &amp; Direct Reports</div>
+          <div class="urgent-training-date">Bi-Weekly</div>
+          <div class="urgent-training-time">Effective June 8, 2026</div>
+        </div>
+        <div class="urgent-training-card">
+          <span class="urgent-training-required">Weekly Cadence</span>
+          <div class="urgent-training-audience">New Hires &amp; Performance Management</div>
+          <div class="urgent-training-date">Required</div>
+          <div class="urgent-training-time">Through first 6 months</div>
+        </div>
+      </div>
+
+      <div class="urgent-body">
+        <div class="urgent-body-block">
+          <h4>Manager Responsibilities</h4>
+          <p>Schedule and maintain regular 1:1s. Provide timely coaching, feedback, and follow-up. Discuss priorities, workload, performance, and development. Document key topics and next steps.</p>
+        </div>
+        <div class="urgent-body-block">
+          <h4>Direct Report Responsibilities</h4>
+          <p>Come prepared with updates, questions, and topics. Surface concerns, challenges, and roadblocks proactively. Discuss career development goals. Follow through on agreed-upon action items.</p>
+        </div>
+      </div>
+
+      <div class="urgent-footer">
+        <div class="urgent-footer-block">
+          <b>How to Access</b>
+          Log into Rippling, then Talent, then 1:1s. Set the <b>SN 1:1 Template</b> as your default via the three-dot menu, top-right of the 1:1 page.
+        </div>
+        <div class="urgent-footer-block">
+          <b>Questions?</b>
+          Reach out to <a href="mailto:cnewton@stambaughness.com">Carly Newton</a>, People Business Partner.
+        </div>
+      </div>
+    </div>
+
+    <!-- FIRM WIN CALLOUT -->
+  <div class="win-callout" style="margin:52px -52px 0;">
+    
+    <div class="win-photo"></div>
+
+    <div>
+        <div class="win-label">Firm Win</div>
+
+        <div class="win-text">
+            Stambaugh Ness has earned ClearlyRated's <b>2026 Best of Accounting Award</b> for Client Service Excellence, with 516 verified client ratings averaging 4.6 of 5 stars, well above the industry average.
+
+            <a href="https://www.stambaughness.com/news/clearlyrated-2026-best-of-accounting-award/"
+               target="_blank"
+               rel="noopener"
+               style="display:inline-block;margin-left:10px;padding:6px 12px;background-color:#232c60;color:#ffffff;text-decoration:none;font-size:12px;border-radius:3px;font-weight:600;">
+                Read More
+            </a>
+        </div>
+    </div>
+
+</div>
+    <div class="rule-gold"><div class="rule-gold-center"></div></div>
+
+    <!-- LIVE EVENTS & TRAINING, IN SPOTLIGHT FRAME -->
+    <section id="events">
+      <div class="spotlight">
+        <div style="display:flex;align-items:center;gap:16px;margin:0 0 28px 0;">
+          <span class="sec-label" style="font-size:13px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap;">Upcoming Live Events &amp; Training</span>
+          <div style="flex:1;height:2px;background:rgba(255,255,255,0.15);"></div>
+          <div style="width:28px;height:4px;background:#FFB81C;border-radius:2px;flex-shrink:0;"></div>
+        </div>
+
+        <div class="events-banner-block">
+          <aside class="events-banner">
+            <div class="eb-quarter">Q2</div>
+            <div class="eb-divider"></div>
+            <div class="eb-icon">🎓</div>
+            <div class="eb-title">Power<br/><em>Skills</em></div>
+            <div class="eb-subtitle">Live Series</div>
+            <div class="eb-bottom">
+              <div class="eb-month">Apr-Jun</div>
+              <div class="eb-year">2026</div>
+            </div>
+          </aside>
+
+          <div class="events-content-col">
+            <div class="events-lead">
+              <div class="events-lead-eyebrow">Q2 Live Sessions</div>
+              <h3 class="events-lead-hed">Listen. Coach. <em>Give Feedback.</em></h3>
+              <p class="events-lead-body">This quarter's live training sessions mark the first step in a firm-wide rollout of intentional development at Stambaugh Ness, the foundation for more robust practice area development and personalized individual growth opportunities on the horizon. Every team member is expected to attend at least one session per quarter. Register and track your progress in SPI.</p>
+            </div>
+
+            <div class="events-grid">
+              <div class="event-card">
+                <img src="https://www.odgersinterim.com/fileadmin/_processed_/d/6/csm_Active_Listening_in_the_workplace_90134e6f12.jpg" alt="Active Listening" style="width:100%;height:120px;object-fit:cover;display:block;margin:-20px -20px 16px -20px;width:calc(100% + 40px);"/>
+                <div class="event-badge"><span class="mo">APR</span><span class="dy">2026</span></div>
+                <div class="event-title">Active Listening: The #1 Power Skill</div>
+                <div class="event-meta">Gallup CliftonStrengths &nbsp;·&nbsp; All Staff</div>
+                <div class="event-desc">Learn to listen with the intent to understand, not just respond. Practice presence, paraphrasing, and reflective listening in client and team conversations.</div>
+                <a href="https://spi.stambaughness.com/learn/courses/844/active-listening-the-1-power-skill/sessions/27/active-listening-the-1-power-skill" target="_blank" rel="noopener" class="event-cta event-cta-secondary">View the Recording →</a>
+              </div>
+              <div class="event-card">
+                <img src="https://www.toastmasters.org/magazine/magazine-issues/2022/apr/medias/images/pubs-and-magazine/2022-digital-magazine/04/awkward-conversations/22-awkward-conversations-main.png" alt="Coaching Conversations" style="width:100%;height:120px;object-fit:cover;display:block;margin:-20px -20px 16px -20px;width:calc(100% + 40px);"/>
+                <div class="event-badge"><span class="mo">MAY</span><span class="dy">2026</span></div>
+                <div class="event-title">Coaching Conversations</div>
+                <div class="event-meta">Gallup CliftonStrengths &nbsp;·&nbsp; All Staff</div>
+                <div class="event-desc">Coaching isn't just a manager tool. It's how every professional accelerates growth. Learn when to coach vs. advise and how to hold a high-impact coaching conversation.</div>
+                <a href="https://spi.stambaughness.com/learn/courses/886/coaching-conversations" target="_blank" rel="noopener" class="event-cta event-cta-secondary">View the Recording →</a>
+              </div>
+              <div class="event-card">
+                <img src="https://blog.insynctraining.com/hubfs/09152020%20Facilitation%20Tips%20Series%20Blog%20Part%202%20Feedback.png" alt="Giving and Receiving Feedback" style="width:100%;height:120px;object-fit:cover;display:block;margin:-20px -20px 16px -20px;width:calc(100% + 40px);"/>
+                <div class="event-badge"><span class="mo">JUN</span><span class="dy">2026</span></div>
+                <div class="event-title">Giving &amp; Receiving Feedback</div>
+                <div class="event-meta">Live Above the Line &nbsp;·&nbsp; All Staff</div>
+                <div class="event-desc">Master the Situation-Behavior-Impact feedback model. Build a culture where feedback is expected, welcomed, and acted on at every level of the organization.</div>
+                <a href="https://spi.stambaughness.com/learn/signin?redirectUrl=/learn/courses/913/giving-and-receiving-feedback" target="_blank" rel="noopener" class="event-cta event-cta-primary">Registration Open →</a>
+              </div>
+              <div class="event-card req-card">
+                <div class="req-card-inner">
+                  <div class="req-card-label">Requirement</div>
+                  <div class="req-card-num">1</div>
+                  <div class="req-card-text">Session<br/>Per Quarter</div>
+                  <div class="req-card-note">All sessions tracked<br/>in SPI / Rippling</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule-gold"><div class="rule-gold-center"></div></div>
+    <!-- RESOURCES -->
+    <section id="resources">
+      <div class="sec-head">
+        <span class="sec-label">Resources &amp; Links</span>
+        <div class="sec-line"></div>
+        <div class="sec-pip"></div>
+      </div>
+      <ul class="res-list">
+        <li class="res-item"><div><div class="res-tag">Leadership Development</div><div class="res-title">SPI Leadership Development Catalog <span class="en">New</span></div></div><a href="https://spi.stambaughness.com/learn/catalog/view/27" target="_blank" rel="noopener" class="res-cta">Browse →</a></li>
+        <li class="res-item"><div><div class="res-tag">Tool / Platform</div><div class="res-title">Skills &amp; Performance Institute <span class="en">SPI</span></div></div><a href="https://spi.stambaughness.com/" target="_blank" rel="noopener" class="res-cta">Access →</a></li>
+        <li class="res-item"><div><div class="res-tag">Industry Initiative</div><div class="res-title">The Finnies, AEC Financial Leadership Awards <span class="en">Due June 12</span></div></div><a href="https://tally.so/r/VLZpgg" target="_blank" rel="noopener" class="res-cta">Nominate →</a></li>
+        <li class="res-item"><div><div class="res-tag">Gallup Access Portal</div><div class="res-title">Review Your Top Strengths & Team Grid <span class="en">Available to All Employees</span></div></div><a href="https://spi.stambaughness.com/learn/catalog/view/27" target="_blank" rel="noopener" class="res-cta">View Guide →</a></li>
+      </ul>
+
+      <div class="res-sub-head">
+        <span class="res-sub-label">Upcoming Events</span>
+        <div class="res-sub-line"></div>
+      </div>
+      <ul class="events-li-list">
+        <li class="event-li">
+          <div class="event-li-date"><span class="mo">Jun</span><span class="day">10</span></div>
+          <div class="event-li-title">AIA Conference on Architecture &amp; Design 2026</div>
+          <a href="https://www.stambaughness.com/event/aia-conference-on-architecture-design-2026/" target="_blank" rel="noopener" class="event-li-link">Details →</a>
+        </li>
+        <li class="event-li">
+          <div class="event-li-date"><span class="mo">Jun</span><span class="day">10</span></div>
+          <div class="event-li-title">Bridging the PM &amp; Finance Gap in Ajera: What Your PMs Wish You Knew (and Vice Versa)</div>
+          <a href="https://www.stambaughness.com/event/ajera-project-financial-visibility/" target="_blank" rel="noopener" class="event-li-link">Details →</a>
+        </li>
+        <li class="event-li">
+          <div class="event-li-date"><span class="mo">Jun</span><span class="day">16</span></div>
+          <div class="event-li-title">New State, New Rules: Remote Teams, Licensing &amp; State Tax</div>
+          <a href="https://www.stambaughness.com/event/salt-hiring-having-remote-employees/" target="_blank" rel="noopener" class="event-li-link">Details →</a>
+        </li>
+        <li class="event-li">
+          <div class="event-li-date"><span class="mo">Jun</span><span class="day">17</span></div>
+          <div class="event-li-title">Deltek Vantagepoint Dashboards: Moving Beyond Data to Operational Insight</div>
+          <a href="https://www.stambaughness.com/event/vantagepoint-vision-virtual-user-group-meeting-dashboards-dashparts/" target="_blank" rel="noopener" class="event-li-link">Details →</a>
+        </li>
+        <li class="event-li">
+          <div class="event-li-date"><span class="mo">Jun</span><span class="day">24</span></div>
+          <div class="event-li-title">AEC Mid-Year Tax Update: 2026 Planning &amp; Opportunities</div>
+          <a href="https://www.stambaughness.com/event/aec-mid-year-tax-update/" target="_blank" rel="noopener" class="event-li-link">Details →</a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <div class="footer-wm">Stambaugh <span>Ness</span></div>
+      <div class="footer-sub">Skills &amp; Performance Institute &nbsp;·&nbsp; People Development</div>
+    </div>
+    <nav class="footer-links">
+      <a href="https://forms.cloud.microsoft/r/Gsfz1RLMWe">Newsletter Idea Submissions</a>
+      <a href="https://sn.sharepoint.com/sites/sn-central/SitePages/Home.aspx">SN Central</a>
+      <a href="https://spi.stambaughness.com/">SPI LMS</a>
+      <a href="https://sn.sharepoint.com/sites/SNEmployeeLounge">HR Lounge</a>
+    </nav>
+  </footer>
+  <div class="footer-bottom">
+    &copy; 2026 Stambaugh Ness &nbsp;&middot;&nbsp; Internal Use Only &nbsp;&middot;&nbsp; Skills &amp; Performance Institute
+  </div>
+</div>
+</body>
+</html>
