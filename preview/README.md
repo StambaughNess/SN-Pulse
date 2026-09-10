@@ -574,7 +574,8 @@
     .snz-banner { margin:10px -52px 20px; background:#FFFFFF; border-bottom:2px solid var(--gold); padding:14px 52px; display:flex; justify-content:center; align-items:center; }
     .snz-banner img { height:38px; width:auto; display:block; }
     @media (max-width:580px) { .snz-banner { margin:8px -24px 18px; padding:12px 24px; } .snz-banner img { height:28px; } }
-    .course-img { display:block; width:calc(100% + 36px); height:140px; object-fit:cover; margin:-18px -18px 16px -18px; }
+    .course-img { display:block; width:calc(100% + 36px); height:160px; object-fit:cover; object-position:center; margin:-18px -18px 16px -18px; background:#FFFFFF; }
+    .course-img-logo { object-fit:contain; padding:14px 0; box-sizing:border-box; border-bottom:1px solid var(--rule); }
   </style>
 </head>
 <body>
@@ -706,28 +707,28 @@
 
       <div class="course-grid">
         <a href="https://zweiggroup.com/pages/annual-elevateaec-conference" target="_blank" rel="noopener" class="course-card">
-          <img class="course-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&auto=format&fit=crop&q=60" alt="The Finnies awards event" loading="lazy" onerror="this.style.display='none'"/>
+          <img class="course-img course-img-logo" src="https://zweiggroup.com/cdn/shop/files/FinancialLeadership_Logo_Red_800x.webp?v=1774887121" alt="The Finnies: Financial Leadership Awards logo" loading="lazy" onerror="this.style.display='none'"/>
           <div class="course-tag">Industry Recognition</div>
           <div class="course-title" style="padding-right:0;">The Finnies</div>
           <div class="course-desc">The AEC Financial Leadership Awards, powered by SN and presented with Zweig Group, recognize the finance leaders driving firm performance across the industry. Winners are celebrated at ElevateAEC, September 29 to October 1 in Park City.</div>
           <div class="course-meta">SN and Zweig Group</div>
         </a>
         <a href="https://www.stambaughness.com/event/the-principals-academy/" target="_blank" rel="noopener" class="course-card">
-          <img class="course-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&auto=format&fit=crop&q=60" alt="Leadership education session" loading="lazy" onerror="this.style.display='none'"/>
+          <img class="course-img" src="https://zweiggroup.com/cdn/shop/files/TPA_Hollywood-6458_1100x.jpg?v=1769613451" alt="The Principals Academy session" loading="lazy" onerror="this.style.display='none'"/>
           <div class="course-tag">Leadership Education</div>
           <div class="course-title" style="padding-right:0;">The Principals Academy</div>
           <div class="course-desc">Zweig Group's flagship mini-MBA for current and emerging AEC leaders features SN's Becky Carlson and Alyson Fieldman presenting alongside Chad Clinehens. Next session: October 21 to 22 in Chicago, with 12 CPE credits.</div>
           <div class="course-meta">Shared Faculty</div>
         </a>
         <a href="https://zweiggroup.com/products/before-the-deal-positioning-your-firm-to-sell-with-confidence-clarity" target="_blank" rel="noopener" class="course-card">
-          <img class="course-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&auto=format&fit=crop&q=60" alt="Team collaborating on laptops" loading="lazy" onerror="this.style.display='none'"/>
+          <img class="course-img" src="https://www.stambaughness.com/wp-content/uploads/2026/03/sell-side-positioning-aec-firm-for-sale-1200x630-1.webp" alt="AEC Sell-Side Webinar Series" loading="lazy" onerror="this.style.display='none'"/>
           <div class="course-tag">Joint Webinars</div>
           <div class="course-title" style="padding-right:0;">AEC Sell-Side Webinar Series</div>
           <div class="course-desc">This summer's three-part series, presented by SN and Zweig Group, walked AEC owners through a sale before, during, and after the deal. SN's Jeff Adams, Brad Wilson, Andrew Chavez, and Kristi Weierbach shared the stage with Zweig Group's Will Swearingen and Jeremy Clarke.</div>
           <div class="course-meta">June to August 2026</div>
         </a>
         <a href="https://www.stambaughness.com/event/ma-next-symposium/" target="_blank" rel="noopener" class="course-card">
-          <img class="course-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&auto=format&fit=crop&q=60" alt="Mountains near Park City" loading="lazy" onerror="this.style.display='none'"/>
+          <img class="course-img" src="https://zweiggroup.com/cdn/shop/files/elevate-aec-gala.jpg?v=1745431628&amp;width=1100" alt="ElevateAEC Awards Gala" loading="lazy" onerror="this.style.display='none'"/>
           <div class="course-tag">Shared Events</div>
           <div class="course-title" style="padding-right:0;">M&amp;A Next and ElevateAEC</div>
           <div class="course-desc">Both firms' teams head to Park City, September 28 to October 1, for a week of deal insight, industry learning, and recognition of the AEC firms setting the pace on performance, growth, and culture.</div>
