@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -638,6 +637,10 @@
     .cam-about { margin-top:16px; padding:14px 16px; background:rgba(255,255,255,0.08); border-left:3px solid var(--gold); font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.88); position:relative; z-index:1; }
     .cam-about b { color:var(--gold); }
     .cam-about a { color:var(--gold); font-weight:700; text-decoration:none; border-bottom:1px solid rgba(255,184,28,0.6); white-space:nowrap; }
+    .cam-contact { display:block; margin-top:auto; padding:11px 14px; background:var(--green); color:#FFFFFF; font-size:12px; line-height:1.5; text-decoration:none; border-left:3px solid var(--gold); }
+    .cam-contact b { color:var(--gold); }
+    .cam-contact-email { font-weight:700; border-bottom:1px solid rgba(255,184,28,0.7); white-space:nowrap; }
+    .cam-contact:hover { background:var(--green-dark); }
   </style>
 </head>
 <body>
@@ -1054,7 +1057,7 @@
                 <div class="cam-covers"><b>Covers:</b> warning signs and risk indicators, communicating concerns effectively, and leading risk management practices.</div>
                 <div class="cam-cpe">1 General CPE · Risk Management</div>
                 <div class="cam-note">Does not satisfy ethics CPE requirements.</div>
-                <a href="https://teams.microsoft.com/meet/28597966939562?p=gyWtih6ZgMebAUe5XZ" target="_blank" rel="noopener" class="event-cta event-cta-primary">Join in Teams →</a>
+                <a href="mailto:mtingle@stambaughness.com?subject=CAMICO%20Training%20Enrollment:%20Fraud%20and%20Embezzlement%20(Oct.%2023)" class="cam-contact">Contact <b>Melissa Tingle</b> at <span class="cam-contact-email">mtingle@stambaughness.com</span> for enrollment information</a>
               </div>
               <div class="event-card cam-card">
                 <div class="event-badge"><span class="mo">October</span><span class="dy">29</span></div>
@@ -1064,7 +1067,7 @@
                 <div class="cam-covers"><b>Covers:</b> managing client expectations through documentation, disengagement letters and risk mitigation, and best practices for professional communications.</div>
                 <div class="cam-cpe">1 General CPE · Practice Management / Risk Management</div>
                 <div class="cam-note">Does not satisfy ethics CPE requirements.</div>
-                <a href="https://teams.microsoft.com/meet/293882325471314?p=1A2wAWAIHcTeqbvo2I" target="_blank" rel="noopener" class="event-cta event-cta-primary">Join in Teams →</a>
+                <a href="mailto:mtingle@stambaughness.com?subject=CAMICO%20Training%20Enrollment:%20Engagement%20Letters%20(Oct.%2029)" class="cam-contact">Contact <b>Melissa Tingle</b> at <span class="cam-contact-email">mtingle@stambaughness.com</span> for enrollment information</a>
               </div>
               <div class="event-card cam-card">
                 <div class="event-badge"><span class="mo">November</span><span class="dy">10</span></div>
@@ -1074,7 +1077,7 @@
                 <div class="cam-covers"><b>Covers:</b> ethical responsibilities of accounting professionals, real-world case studies, and lessons learned in ethics and risk management.</div>
                 <div class="cam-cpe">2 CPE · Regulatory Ethics</div>
                 <div class="cam-note">Date pending final CAMICO confirmation. State ethics requirements vary, so confirm this program meets the requirements for your licensing jurisdiction.</div>
-                <span class="event-cta event-cta-secondary cam-enroll-soon">Enrollment Link Coming</span>
+                <a href="mailto:mtingle@stambaughness.com?subject=CAMICO%20Training%20Enrollment:%20Ethics%20(Nov.%2010)" class="cam-contact">Contact <b>Melissa Tingle</b> at <span class="cam-contact-email">mtingle@stambaughness.com</span> for enrollment information</a>
               </div>
               <div class="event-card">
                 <div class="event-badge"><span class="mo">Catch Up</span><span class="dy">SPI</span></div>
