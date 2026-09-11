@@ -1139,17 +1139,17 @@
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">23</span></div>
           <div class="event-li-title">CAMICO: Fraud and Embezzlement Risk Management (1 CPE)</div>
-          <a href="#events" class="event-li-link">Details →</a>
+    
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">29</span></div>
           <div class="event-li-title">CAMICO: Engagement Letters, Disengagement Letters and More (1 CPE)</div>
-          <a href="#events" class="event-li-link">Details →</a>
+         
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Nov</span><span class="day">10</span></div>
           <div class="event-li-title">CAMICO Ethics: Ethical Dilemmas and War Stories (2 CPE)</div>
-          <span class="event-li-tag">Date Pending</span>
+          
         </li>
       </ul>
     </section>
