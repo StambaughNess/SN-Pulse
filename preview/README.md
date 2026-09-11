@@ -628,6 +628,9 @@
       #culture .cul-quote-text { font-size:19px; }
     }
     #partnership .course-card { border:1px solid var(--green); border-left:3px solid var(--green); }
+    #culture .cul-excerpt p { margin:0 0 14px; }
+    #culture .cul-excerpt p:last-child { margin-bottom:0; }
+    #culture .cul-grid { margin-bottom:0; }
   </style>
 </head>
 <body>
@@ -873,7 +876,7 @@
       <div class="cul-hero">
         <span class="cul-photo">KB<img src="https://www.stambaughness.com/wp-content/uploads/2022/03/2016-photo-e1458928697926.png" alt="Katie Bochniak" onerror="this.style.display='none'"/></span>
         <div>
-          <blockquote class="cul-excerpt">"SN was built on several foundational assumptions that will not be changing. In fact, they're the reason this firm works and why many of us have chosen to work here."</blockquote>
+          <blockquote class="cul-excerpt"><p>"SN was built on several foundational assumptions that will not be changing. In fact, they're the reason this firm works and why many of us have chosen to work here."</p><p>"The most useful thing any of us can do in the coming months is get curious about what [our Zweig Group colleagues] do well and look for ways to help them bring those things to our shared workplace."</p></blockquote>
           <div class="cul-name">Katie Bochniak</div>
           <div class="cul-role">Chief People &amp; Culture Officer</div>
         </div>
@@ -899,11 +902,6 @@
             <li><b>Recognition</b> that reflects your contributions</li>
           </ul>
         </div>
-      </div>
-
-      <div class="cul-quote">
-        <div class="cul-quote-text">"The most useful thing any of us can do in the coming months is get curious about what they do well and look for ways to help them bring those things to our shared workplace."</div>
-        <div class="cul-by"><span class="cul-av">KB<img src="https://www.stambaughness.com/wp-content/uploads/2022/03/2016-photo-e1458928697926.png" alt="Katie Bochniak" onerror="this.style.display='none'"/></span><span><b>Katie Bochniak</b><br/>Chief People &amp; Culture Officer</span></div>
       </div>
     </section>
 
