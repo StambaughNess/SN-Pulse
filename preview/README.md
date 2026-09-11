@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -634,6 +635,9 @@
     .leadership-quote, .leadership-source { font-style:normal !important; }
     .esc-email { display:inline-block; margin-top:3px; font-size:11.5px; font-weight:700; color:var(--teal); text-decoration:none; border-bottom:1px solid var(--gold); word-break:break-all; }
     .esc-email:hover { color:var(--green); }
+    .cam-about { margin-top:16px; padding:14px 16px; background:rgba(255,255,255,0.08); border-left:3px solid var(--gold); font-size:12.5px; line-height:1.6; color:rgba(255,255,255,0.88); position:relative; z-index:1; }
+    .cam-about b { color:var(--gold); }
+    .cam-about a { color:var(--gold); font-weight:700; text-decoration:none; border-bottom:1px solid rgba(255,184,28,0.6); white-space:nowrap; }
   </style>
 </head>
 <body>
@@ -743,8 +747,7 @@
       </div>
 
       <div class="news-actions">
-        <a href="https://plwxfkcab.cc.rs6.net/tn.jsp?f=001UV3_LQfed-kD1OTo93F15UgI3zDKr3Jdr5609C0NlGOK_8GC7HFISjodk07AYU1625VG6-3GNEEeZi-JrkEN8LFgsLvinFDOYuQA5j3SAcFqOf_Rm8VITP5oICys6Ov5snaclqK67YR2JzXygj25ztyV6gRhnI4IW6BjbefUBwLj2C1IWEKkcaKcoK5QjqKT91-SxCrRW9stLbUBVk3dB56Oo5rif1g00XpGC2w8toUo8P9IPTT0GFefwi8bOifr9ap7EsSJFV4yMD_y_TdRHINFuB2ciwKX5IAyID8NSm5PtGbsyF5BMhwDYtGOAyhIGHWd_VOpjB8wJQfa453FNuL810mxmkH-kaeyIDCF6Omk58bWVZa7KPkitAEfPGN9gtLD2yLsxsWwkoOslNXFgdsA891jLOrtOLIreRNBo3KgXTH-jLkd-aFclmYhouml_cMunAXMP91IOwWCD1mjBtXe2MVWbir5BrYDFepF62-CPgsXLLLBT5s55_SfnM9Iz85Mv0yXz7cBhJj7uMzZTj0Oo5CaJltZki1Lgj4ZDKGVjkRNEftsH4VTq8ZJJ3b4AXwVl99O00pPwaH3z8rgLwLvpOC4N2WOLKFIcOrC4LQ=&amp;c=NEW4FMmxjnOs-hER9zmNEGMGNMUXTIu1eruQMr__12rIkd-gujoG9w==&amp;ch=sxY0rcRaMLWdOIV5CwFnJLJtMRrOpwLS1TZ5NDE9MaBKrK4wftC7qQ==&amp;_utm_medium=email&amp;_utm_source=ctct" target="_blank" rel="noopener" class="news-btn news-btn-primary">Watch the Recording</a>
-        <a href="https://plwxfkcab.cc.rs6.net/tn.jsp?f=001UV3_LQfed-kD1OTo93F15UgI3zDKr3Jdr5609C0NlGOK_8GC7HFISjodk07AYU16gH5KSU72vpE3DvA9ec915A-d-VokS8i5Q_41l0jY8SAKUNF7FcFCCytYPtH3OeAoL7eZf_WAaQuYZAnAsXSEmWLgLjfYddewCxxcIRasG6743qM_3CvGfQ==&amp;c=NEW4FMmxjnOs-hER9zmNEGMGNMUXTIu1eruQMr__12rIkd-gujoG9w==&amp;ch=sxY0rcRaMLWdOIV5CwFnJLJtMRrOpwLS1TZ5NDE9MaBKrK4wftC7qQ==&amp;_utm_medium=email&amp;_utm_source=ctct" target="_blank" rel="noopener" class="news-btn news-btn-secondary">Read the SNZweig One FAQs</a>
+        <a href="https://plwxfkcab.cc.rs6.net/tn.jsp?f=001UV3_LQfed-kD1OTo93F15UgI3zDKr3Jdr5609C0NlGOK_8GC7HFISjodk07AYU16gH5KSU72vpE3DvA9ec915A-d-VokS8i5Q_41l0jY8SAKUNF7FcFCCytYPtH3OeAoL7eZf_WAaQuYZAnAsXSEmWLgLjfYddewCxxcIRasG6743qM_3CvGfQ==&amp;c=NEW4FMmxjnOs-hER9zmNEGMGNMUXTIu1eruQMr__12rIkd-gujoG9w==&amp;ch=sxY0rcRaMLWdOIV5CwFnJLJtMRrOpwLS1TZ5NDE9MaBKrK4wftC7qQ==&amp;_utm_medium=email&amp;_utm_source=ctct" target="_blank" rel="noopener" class="news-btn news-btn-primary">Read the SNZweig One FAQs</a>
       </div>
     </section>
 
@@ -1039,6 +1042,7 @@
               <div class="events-lead-eyebrow">Featured: CAMICO Training Series</div>
               <h3 class="events-lead-hed">Protect Your Practice. <em>Earn Your CPE.</em></h3>
               <p class="events-lead-body">CAMICO's Duncan Will leads three live sessions on the risks accounting professionals and their clients face, from fraud and embezzlement to engagement letters and ethics. Every session starts at 12:00 PM ET. To receive credit documentation from CAMICO, you must stay actively engaged for the full session and answer the required polling questions.</p>
+              <div class="cam-about"><b>Who is CAMICO?</b> Created by CPAs for CPAs, CAMICO provides professional liability insurance and risk management resources to accounting firms nationwide, and celebrates its 40th anniversary in 2026. Its in-house specialists, including presenter Duncan Will, CPA/ABV/CFF, CFE, lead NASBA-accredited education like this series. <a href="https://www.camico.com/" target="_blank" rel="noopener">camico.com →</a></div>
             </div>
 
             <div class="events-grid">
@@ -1141,17 +1145,14 @@
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">23</span></div>
           <div class="event-li-title">CAMICO: Fraud and Embezzlement Risk Management (1 CPE)</div>
-          <a href="#events" class="event-li-link">Details →</a>
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">29</span></div>
           <div class="event-li-title">CAMICO: Engagement Letters, Disengagement Letters and More (1 CPE)</div>
-          <a href="#events" class="event-li-link">Details →</a>
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Nov</span><span class="day">10</span></div>
           <div class="event-li-title">CAMICO Ethics: Ethical Dilemmas and War Stories (2 CPE)</div>
-          <span class="event-li-tag">Date Pending</span>
         </li>
       </ul>
     </section>
