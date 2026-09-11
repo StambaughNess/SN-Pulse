@@ -632,6 +632,8 @@
     #culture .cul-excerpt p:last-child { margin-bottom:0; }
     #culture .cul-grid { margin-bottom:0; }
     .leadership-quote, .leadership-source { font-style:normal !important; }
+    .esc-email { display:inline-block; margin-top:3px; font-size:11.5px; font-weight:700; color:var(--teal); text-decoration:none; border-bottom:1px solid var(--gold); word-break:break-all; }
+    .esc-email:hover { color:var(--green); }
   </style>
 </head>
 <body>
@@ -732,7 +734,7 @@
       <div class="feature-body">
         <p><b>Stambaugh Ness and Zweig Group are merging.</b> The goal isn't size for its own sake. It's a platform that brings together the expertise, insight, and capabilities AEC leaders need to build stronger firms, and it's designed to help the firms we serve create lasting value and shape what's next in the industry.</p>
         <p>An announcement of this size brings excitement and pride, and naturally, a lot of questions. If you couldn't attend live, the recording is ready for you now. The <a href="https://plwxfkcab.cc.rs6.net/tn.jsp?f=001UV3_LQfed-kD1OTo93F15UgI3zDKr3Jdr5609C0NlGOK_8GC7HFISjodk07AYU16gH5KSU72vpE3DvA9ec915A-d-VokS8i5Q_41l0jY8SAKUNF7FcFCCytYPtH3OeAoL7eZf_WAaQuYZAnAsXSEmWLgLjfYddewCxxcIRasG6743qM_3CvGfQ==&amp;c=NEW4FMmxjnOs-hER9zmNEGMGNMUXTIu1eruQMr__12rIkd-gujoG9w==&amp;ch=sxY0rcRaMLWdOIV5CwFnJLJtMRrOpwLS1TZ5NDE9MaBKrK4wftC7qQ==&amp;_utm_medium=email&amp;_utm_source=ctct" target="_blank" rel="noopener" class="faq-link">SNZweig One FAQs</a> cover the questions we've heard most so far, and frequent internal communications will keep the updates coming. For our Zweig Group colleagues joining SN, the October 5 Live Orientation will answer every remaining question.</p>
-        <p>One ask while we get there: <b>keep this news inside the firm.</b> Clients hear it from us on September 14, and the public announcement follows on September 15.</p>
+        <p>One ask while we get there: <b>please keep this news inside the firm.</b> Select clients will hear it from us on September 14, and the public announcement follows on September 15.</p>
       </div>
 
       <div class="news-pull">
@@ -772,7 +774,7 @@
           <img class="course-img" src="https://zweiggroup.com/cdn/shop/files/TPA_Hollywood-6458_1100x.jpg?v=1769613451" alt="The Principals Academy session" loading="lazy" onerror="this.style.display='none'"/>
           <div class="course-tag">Leadership Education</div>
           <div class="course-title" style="padding-right:0;">The Principals Academy</div>
-          <div class="course-desc">Zweig Group's flagship mini-MBA for current and emerging AEC leaders features SN's Becky Carlson and Alyson Fieldman presenting alongside Chad Clinehens. Next session: October 21 to 22 in Chicago, with 12 CPE credits.</div>
+          <div class="course-desc">Zweig Group's flagship mini-MBA for current and emerging AEC leaders features SN's Becky Carlson presenting alongside Chad Clinehens. Next session: October 21 to 22 in Chicago, with 12 CPE credits.</div>
           <div class="course-meta">Shared Faculty</div>
         </a>
         <a href="https://zweiggroup.com/products/before-the-deal-positioning-your-firm-to-sell-with-confidence-clarity" target="_blank" rel="noopener" class="course-card">
@@ -819,8 +821,8 @@
         <li class="tl-item">
           <div class="tl-dot" aria-hidden="true">2</div>
           <div class="tl-date">Sept. 14</div>
-          <div class="tl-title">Client Communications</div>
-          <div class="tl-desc">Clients hear the news directly from us.</div>
+          <div class="tl-title">Select Client Communications</div>
+          <div class="tl-desc">Select clients hear the news directly from us.</div>
         </li>
         <li class="tl-item is-key">
           <div class="tl-dot" aria-hidden="true">3</div>
@@ -959,37 +961,37 @@
             <tr class="esc-urgent">
               <td class="esc-if">A reporter or media outlet reaches out <span class="esc-flag">Right away</span></td>
               <td>Don't comment, even informally. Forward the request immediately.</td>
-              <td class="esc-who"><span class="esc-who-name">Alyson Fieldman</span><span class="esc-who-role">Chief Growth Officer, sole media contact</span></td>
+              <td class="esc-who"><span class="esc-who-name">Alyson Fieldman</span><span class="esc-who-role">Chief Growth Officer, sole media contact</span><a href="mailto:afieldman@stambaughness.com" class="esc-email">afieldman@stambaughness.com</a></td>
             </tr>
             <tr class="esc-urgent">
-              <td class="esc-if">A client or prospect asks before Sept. 14 <span class="esc-flag">Right away</span></td>
-              <td>Keep the news internal. Note the question and let your leader know so the client hears it from the firm on September 14.</td>
+              <td class="esc-if">A client or prospect asks before the public announcement <span class="esc-flag">Right away</span></td>
+              <td>Keep the news internal. Select clients hear it from the firm on September 14, and everyone else with the public announcement on September 15. Note the question and let your leader know.</td>
               <td class="esc-who"><span class="esc-who-name">Your Practice or Engagement Leader</span></td>
             </tr>
             <tr>
-              <td class="esc-if">A client asks on or after Sept. 14</td>
+              <td class="esc-if">A client asks after they've been notified, or after Sept. 15</td>
               <td>Share only what's in the official client communication. Route anything deeper or more specific.</td>
               <td class="esc-who"><span class="esc-who-name">Your Practice or Engagement Leader</span></td>
             </tr>
             <tr>
               <td class="esc-if">You want to post about it on LinkedIn or social media</td>
               <td>Hold until the public announcement on September 15, then share the firm's official posts.</td>
-              <td class="esc-who"><span class="esc-who-name">Marketing</span><span class="esc-who-role">Led by Alyson Fieldman</span></td>
+              <td class="esc-who"><span class="esc-who-name">Marketing</span><span class="esc-who-role">Led by Alyson Fieldman</span><a href="mailto:afieldman@stambaughness.com" class="esc-email">afieldman@stambaughness.com</a></td>
             </tr>
             <tr>
               <td class="esc-if">You have a question about your role, team, or benefits</td>
               <td>Start with your manager. For anything personal or confidential, reach out to People Operations directly.</td>
-              <td class="esc-who"><span class="esc-who-name">Your Manager, then Katie Bochniak</span><span class="esc-who-role">Chief People &amp; Culture Officer</span></td>
+              <td class="esc-who"><span class="esc-who-name">Your Manager, then Katie Bochniak</span><span class="esc-who-role">Chief People &amp; Culture Officer</span><a href="mailto:kbochniak@stambaughness.com" class="esc-email">kbochniak@stambaughness.com</a></td>
             </tr>
             <tr>
               <td class="esc-if">You have a question about systems, tools, or access</td>
               <td>Keep using current systems until you're told otherwise. Send access or tool questions through the usual channel.</td>
-              <td class="esc-who"><span class="esc-who-name">IT Help Desk</span></td>
+              <td class="esc-who"><span class="esc-who-name">IT Help Desk</span><a href="mailto:it@stambaughness.com" class="esc-email">it@stambaughness.com</a></td>
             </tr>
             <tr>
               <td class="esc-if">You're coordinating joint work with Zweig Group colleagues</td>
               <td>Keep collaborating as you have been. Raise any transition questions or cross-firm coordination needs.</td>
-              <td class="esc-who"><span class="esc-who-name">Katie Bochniak (SN)</span><span class="esc-who-name">Jeremy Clarke (Zweig Group)</span></td>
+              <td class="esc-who"><span class="esc-who-name">Katie Bochniak (SN)</span><a href="mailto:kbochniak@stambaughness.com" class="esc-email">kbochniak@stambaughness.com</a><span class="esc-who-name" style="margin-top:6px;">Jeremy Clarke (Zweig Group)</span><a href="mailto:jclarke@zweiggroup.com" class="esc-email">jclarke@zweiggroup.com</a></td>
             </tr>
             <tr>
               <td class="esc-if">Anything else</td>
@@ -1108,7 +1110,7 @@
       <ul class="events-li-list">
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Sep</span><span class="day">14</span></div>
-          <div class="event-li-title">Client Communications</div>
+          <div class="event-li-title">Select Client Communications</div>
           <span class="event-li-tag">Milestone</span>
         </li>
         <li class="event-li">
@@ -1139,17 +1141,17 @@
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">23</span></div>
           <div class="event-li-title">CAMICO: Fraud and Embezzlement Risk Management (1 CPE)</div>
-    
+          <a href="#events" class="event-li-link">Details →</a>
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Oct</span><span class="day">29</span></div>
           <div class="event-li-title">CAMICO: Engagement Letters, Disengagement Letters and More (1 CPE)</div>
-         
+          <a href="#events" class="event-li-link">Details →</a>
         </li>
         <li class="event-li">
           <div class="event-li-date"><span class="mo">Nov</span><span class="day">10</span></div>
           <div class="event-li-title">CAMICO Ethics: Ethical Dilemmas and War Stories (2 CPE)</div>
-          
+          <span class="event-li-tag">Date Pending</span>
         </li>
       </ul>
     </section>
