@@ -598,6 +598,38 @@
     .cul-note { font-size:13px; color:var(--text-mid); line-height:1.65; margin-top:14px; }
     @media (max-width:580px) { .cul-grid { grid-template-columns:1fr; } .cul-quote-text { font-size:18px; } }
     .cul-excerpt { margin:0 0 22px; padding:4px 0 4px 18px; border-left:3px solid var(--gold); font-family:'Cormorant Garamond', Georgia, serif; font-size:19px; font-style:italic; font-weight:600; color:var(--green); line-height:1.45; }
+    /* culture band v2 */
+    #culture.cul-band { margin:0 -52px; background:var(--green); padding:44px 52px 48px; position:relative; overflow:hidden; }
+    #culture.cul-band::after { content:''; position:absolute; right:-90px; top:-90px; width:300px; height:300px; border-radius:50%; border:44px solid rgba(255,184,28,0.08); pointer-events:none; }
+    #culture .sec-label { color:rgba(255,255,255,0.6); }
+    #culture .sec-line { background:rgba(255,255,255,0.18); }
+    .cul-kicker { font-size:10px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin:4px 0 10px; }
+    .cul-hed { font-family:'Cormorant Garamond', Georgia, serif; font-size:40px; font-weight:700; color:#FFFFFF; line-height:1.1; margin:0 0 10px; letter-spacing:-0.01em; }
+    .cul-hed em { color:var(--gold); }
+    .cul-intro { font-size:14px; color:rgba(255,255,255,0.85); line-height:1.65; margin:0 0 26px; max-width:680px; }
+    .cul-hero { display:grid; grid-template-columns:auto 1fr; gap:26px; align-items:center; margin-bottom:28px; position:relative; z-index:1; }
+    .cul-photo, .cul-av { position:relative; border-radius:50%; background:var(--gold); color:var(--charcoal); font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; }
+    .cul-photo { width:112px; height:112px; font-size:26px; box-shadow:0 0 0 4px var(--gold), 0 0 0 12px rgba(255,184,28,0.18); }
+    .cul-av { width:44px; height:44px; font-size:12px; box-shadow:0 0 0 2px var(--charcoal); }
+    .cul-photo img, .cul-av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    #culture .cul-excerpt { margin:0 0 12px; padding:0; border:none; font-family:'Cormorant Garamond', Georgia, serif; font-size:25px; font-style:italic; font-weight:600; color:#FFFFFF; line-height:1.35; }
+    .cul-name { font-size:13px; font-weight:800; color:var(--gold); }
+    .cul-role { font-size:11.5px; color:rgba(255,255,255,0.7); margin-top:2px; }
+    #culture .cul-card { background:#FFFFFF; border:none; border-top:4px solid var(--gold); box-shadow:0 10px 26px rgba(0,0,0,0.18); position:relative; z-index:1; }
+    #culture .cul-card.is-grow { background:var(--gold-pale); border-top-color:var(--teal); }
+    #culture .cul-quote { margin-top:24px; background:var(--gold); border-left:none; padding:26px 30px; position:relative; z-index:1; }
+    #culture .cul-quote-text { color:var(--charcoal); font-size:24px; margin-bottom:14px; }
+    #culture .cul-by { color:var(--charcoal); }
+    #culture .cul-by b { color:var(--green); }
+    @media (max-width:580px) {
+      #culture.cul-band { margin:0 -24px; padding:32px 24px 36px; }
+      .cul-hed { font-size:32px; }
+      .cul-hero { grid-template-columns:1fr; gap:18px; }
+      .cul-photo { width:92px; height:92px; }
+      #culture .cul-excerpt { font-size:21px; }
+      #culture .cul-quote-text { font-size:19px; }
+    }
+    #partnership .course-card { border:1px solid var(--green); border-left:3px solid var(--green); }
   </style>
 </head>
 <body>
@@ -830,16 +862,24 @@
     <div class="rule-gold"><div class="rule-gold-center"></div></div>
 
     <!-- CULTURE -->
-    <section id="culture">
-      <div class="sec-head">
+    <section id="culture" class="cul-band">
+      <div class="sec-head" style="margin-top:0">
         <span class="sec-label">Our Culture</span>
         <div class="sec-line"></div>
         <div class="sec-pip"></div>
       </div>
-      <div class="feature-kicker">A Message From Katie Bochniak, Chief People &amp; Culture Officer</div>
-      <h2 class="feature-hed">Stronger Together, Tomorrow.</h2>
-      <p class="partnership-intro" style="margin-bottom:10px;">In her follow-up to Steve's announcement, Katie spoke to the part of this news that belongs to all of us: our culture.</p>
-      <blockquote class="cul-excerpt">"SN was built on several foundational assumptions that will not be changing. In fact, they're the reason this firm works and why many of us have chosen to work here."</blockquote>
+      <div class="cul-kicker">A Message From Our Chief People &amp; Culture Officer</div>
+      <h2 class="cul-hed">Stronger Together, <em>Tomorrow.</em></h2>
+      <p class="cul-intro">In her follow-up to Steve's announcement, Katie spoke to the part of this news that belongs to all of us: our culture.</p>
+
+      <div class="cul-hero">
+        <span class="cul-photo">KB<img src="https://www.stambaughness.com/wp-content/uploads/2022/03/2016-photo-e1458928697926.png" alt="Katie Bochniak" onerror="this.style.display='none'"/></span>
+        <div>
+          <blockquote class="cul-excerpt">"SN was built on several foundational assumptions that will not be changing. In fact, they're the reason this firm works and why many of us have chosen to work here."</blockquote>
+          <div class="cul-name">Katie Bochniak</div>
+          <div class="cul-role">Chief People &amp; Culture Officer</div>
+        </div>
+      </div>
 
       <div class="cul-grid">
         <div class="cul-card">
@@ -865,7 +905,7 @@
 
       <div class="cul-quote">
         <div class="cul-quote-text">"The most useful thing any of us can do in the coming months is get curious about what they do well and look for ways to help them bring those things to our shared workplace."</div>
-        <div class="cul-by"><span class="cul-av">KB</span><span><b>Katie Bochniak</b><br/>Chief People &amp; Culture Officer</span></div>
+        <div class="cul-by"><span class="cul-av">KB<img src="https://www.stambaughness.com/wp-content/uploads/2022/03/2016-photo-e1458928697926.png" alt="Katie Bochniak" onerror="this.style.display='none'"/></span><span><b>Katie Bochniak</b><br/>Chief People &amp; Culture Officer</span></div>
       </div>
     </section>
 
