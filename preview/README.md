@@ -557,8 +557,6 @@
     .snz-reveal { margin-top:30px; padding-top:26px; border-top:1px solid rgba(255,184,28,0.25); position:relative; z-index:2; }
     .snz-eyebrow { display:flex; align-items:center; gap:10px; font-size:10.5px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
     .snz-eyebrow .urgent-topbar-dia { background:var(--gold); }
-    .snz-frame { background:#3C1815; border:1px solid rgba(255,184,28,0.35); box-shadow:0 12px 30px rgba(0,0,0,0.35); }
-    .snz-frame img { width:100%; height:auto; display:block; }
     .urgent-footer-block a.urgent-faq-link, .urgent-faq-link { color:var(--gold) !important; font-weight:800; text-decoration:none; border-bottom:1px solid rgba(255,184,28,0.6); white-space:nowrap; }
     .urgent-faq-link:hover { border-bottom-color:var(--gold); }
     .snz-caption { margin-top:14px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.85); }
@@ -579,7 +577,7 @@
     #partnership .course-card { display:flex; flex-direction:column; }
     #partnership .course-meta { margin-top:auto; }
     .course-img-logo { padding:34px 0 !important; }
-    .snz-frame { background:transparent !important; border:none !important; box-shadow:none !important; padding:10px 0 4px; display:flex; justify-content:center; }
+    .snz-frame { background:none; border:0; box-shadow:none; padding:10px 0 4px; display:flex; justify-content:center; }
     .snz-frame img { width:100%; max-width:440px; height:auto; display:block; }
     .cul-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     .cul-card { background:var(--off-white); border:1px solid var(--rule); border-top:3px solid var(--green); padding:20px 22px 16px; }
