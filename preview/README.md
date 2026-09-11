@@ -604,7 +604,7 @@
     .cul-kicker { font-size:10px; font-weight:800; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin:4px 0 10px; }
     .cul-hed { font-family:'Cormorant Garamond', Georgia, serif; font-size:40px; font-weight:700; color:#FFFFFF; line-height:1.1; margin:0 0 10px; letter-spacing:-0.01em; }
     .cul-hed em { color:var(--gold); }
-    .cul-intro { font-size:14px; color:rgba(255,255,255,0.85); line-height:1.65; margin:0 0 26px; max-width:680px; }
+    .cul-intro { font-size:14px; color:rgba(255,255,255,0.85); line-height:1.65; margin:0 0 26px; max-width:none; }
     .cul-hero { display:grid; grid-template-columns:auto 1fr; gap:26px; align-items:center; margin-bottom:28px; position:relative; z-index:1; }
     .cul-photo, .cul-av { position:relative; border-radius:50%; background:var(--gold); color:var(--charcoal); font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; }
     .cul-photo { width:112px; height:112px; font-size:26px; box-shadow:0 0 0 4px var(--gold), 0 0 0 12px rgba(255,184,28,0.18); }
